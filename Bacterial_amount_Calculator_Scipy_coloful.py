@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Feb  4 17:54:26 2023
-
-@author: F0321
-"""
+#This will quantify amount of bacteria in image (e.g polymer with bacteria)
 
 import cv2
 import numpy as np
@@ -12,8 +7,8 @@ import openpyxl
 from scipy import ndimage
 
 # Specify the folder containing the images
-folder = "E:/Bacterial_Images/Final_Images"
-result_folder="e:/Bacterial_Images/results_Scipy"
+folder = "Source_Images_Folder"
+result_folder="Images_Results_Folder"
 # Create a list to store the results
 results = []
 
@@ -62,4 +57,5 @@ for i, result in enumerate(results):
     sheet.cell(row=i + 2, column=1, value=result[0])
     sheet.cell(row=i + 2, column=2, value=result[1])
 
-wb.save("e:/Bacterial_Images/bacteria_counts_scipy.xlsx")
+    #saving results in excel
+wb.save("bacteria_counts.xlsx")
