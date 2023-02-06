@@ -1,4 +1,5 @@
 # Rename ASCII files to something 1_untreated in order to have proper lableing in legend
+# Extract roughness using JPK application, then delete all things above values and save it
 
 import matplotlib.pyplot as plt
 import glob
